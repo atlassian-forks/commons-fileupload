@@ -23,7 +23,7 @@
     <version>107</version>
   </parent>
   <artifactId>commons-fileupload2</artifactId>
-  <version>2.0.0-M6-atlassian-4-SNAPSHOT</version>
+  <version>2.0.0-M6-atlassian-4</version>
   <packaging>pom</packaging>
   <name>Apache Commons FileUpload</name>
   <description>
@@ -36,7 +36,7 @@
     <connection>scm:git:https://github.com/atlassian-forks/commons-fileupload.git</connection>
     <developerConnection>scm:git:git@github.com:atlassian-forks/commons-fileupload.git</developerConnection>
     <url>https://github.com/atlassian-forks/commons-fileupload</url>
-    <tag>commons-fileupload2-2.0.0-M6-atlassian-1</tag>
+    <tag>commons-fileupload2-2.0.0-M6-atlassian-4</tag>
   </scm>
   <issueManagement>
     <url>https://issues.apache.org/jira/browse/FILEUPLOAD</url>
@@ -93,7 +93,7 @@
     <commons.distSvnStagingUrl>scm:svn:https://dist.apache.org/repos/dist/dev/commons/${commons.componentid}</commons.distSvnStagingUrl>
     <commons.release.isDistModule>false</commons.release.isDistModule>
     <!-- project.build.outputTimestamp is managed by Maven plugins, see https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
-    <project.build.outputTimestamp>2026-11-06T09:17:51Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-11-06T09:32:41Z</project.build.outputTimestamp>
     <!-- JaCoCo: Don't make code coverage worse than: -->
     <commons.jacoco.haltOnFailure>true</commons.jacoco.haltOnFailure>
     <commons.jacoco.classRatio>1.00</commons.jacoco.classRatio>
