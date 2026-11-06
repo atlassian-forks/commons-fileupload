@@ -620,43 +620,82 @@ public abstract class AbstractFileUpload<R, I extends FileItem<I>, F extends Fil
         this.progressListener = progressListener != null ? progressListener : ProgressListener.NOP;
     }
 
-    //Atlassian patch: old method names for backward compatibility
-    @Deprecated
+    // ======
+    // Atlassian patch: old method names for backward compatibility
+    // =======
+
+    /**
+     * Gets the per part size limit for headers.
+     *
+     * @return The maximum size of the headers for a single part in bytes.
+     */
     public int getPartHeaderSizeMax() {
         return maxPartHeaderSize;
     }
 
-    @Deprecated
+    /**
+     * Sets the per part size limit for headers.
+     *
+     * @param partHeaderSizeMax The maximum size of the headers in bytes.
+     */
     public void setPartHeaderSizeMax(final int partHeaderSizeMax) {
         this.maxPartHeaderSize = partHeaderSizeMax;
     }
 
-    @Deprecated
+    /**
+     * Gets the maximum number of files allowed in a single request.
+     *
+     * @return The maximum number of files allowed in a single request.
+     */
     public long getFileCountMax() {
         return maxFileCount;
     }
 
-    @Deprecated
+    /**
+     * Sets the maximum number of files allowed per request.
+     *
+     * @param fileCountMax The new limit. {@code -1} means no limit.
+     */
     public void setFileCountMax(final long fileCountMax) {
         this.maxFileCount = fileCountMax;
     }
 
-    @Deprecated
+    /**
+     * Gets the maximum allowed size of a single uploaded file, as opposed to {@link #getMaxSize()}.
+     *
+     * @see #setMaxFileSize(long)
+     * @return Maximum size of a single uploaded file.
+     */
     public long getFileSizeMax() {
         return maxFileSize;
     }
 
-    @Deprecated
+    /**
+     * Sets the maximum allowed size of a single uploaded file, as opposed to {@link #getMaxSize()}.
+     *
+     * @see #getMaxFileSize()
+     * @param fileSizeMax Maximum size of a single uploaded file.
+     */
     public void setFileSizeMax(final long fileSizeMax) {
         this.maxFileSize = fileSizeMax;
     }
 
-    @Deprecated
+    /**
+     * Gets the maximum allowed size of a complete request, as opposed to {@link #getMaxFileSize()}.
+     *
+     * @return The maximum allowed size, in bytes. The default value of -1 indicates, that there is no limit.
+     * @see #setMaxSize(long)
+     */
     public long getSizeMax() {
         return maxSize;
     }
 
-    @Deprecated
+    /**
+     * Sets the maximum allowed size of a complete request, as opposed to {@link #setMaxFileSize(long)}.
+     *
+     * @param sizeMax The maximum allowed size, in bytes. The default value of -1 indicates, that there is no limit.
+     * @see #getMaxSize()
+     */
     public void setSizeMax(final long sizeMax) {
         this.maxSize = sizeMax;
     }
